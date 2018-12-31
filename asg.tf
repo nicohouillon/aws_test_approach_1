@@ -51,3 +51,4 @@ ingress {
 lifecycle {
 create_before_destroy = true
 }
+}

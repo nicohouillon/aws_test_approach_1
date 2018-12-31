@@ -15,13 +15,11 @@ resource "aws_security_group" "elb_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-lifecycle {
-create_before_destroy = true
+  lifecycle {
+    create_before_destroy = true
 }
 }
 
-
-}
 ### Creating ELB
 resource "aws_elb" "elb" {
   name = "elb"
