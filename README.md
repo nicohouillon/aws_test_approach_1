@@ -39,5 +39,6 @@ packer build packer.json
 ### Additonal informations :
 * [Terraform]() will retrieve the appropriate most recent AMI in a given region in using a common tag issued from the Packer build.
 * some informations may be needed in variables.tf or terraform.tfvars (example: your AWS credentials/profile , ssh key path, specific region, ...). 
+* ssh access is only allowed from your own public IP ( security group use a 'http' provider to parse the IP ).
 
 
