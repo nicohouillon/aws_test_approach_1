@@ -26,6 +26,7 @@ example : http://elb-1961652575.us-west-2.elb.amazonaws.com/index.php
 
 3) Autoscaling :
 - using the command stress , we can stimulate the CPU and force the autoscaling policies to increase the number of instances.
+This has been tested as per screenshot in Result folder. When SSH to an ec2 instance , a cron task will start the Stress utility for 5 minutes.
 
 ### Pre steps :
 * a Custom AMI is prebuild with [Packer]() and available across various regions . 
@@ -33,6 +34,10 @@ This allows a faster boot time and avoid repetitive download to install dependen
 ```
 packer build packer.json 
 ```
+* index.php is downloaded from a S3 bucket and a Ec2 role with S3 access has been previously created. 
+
 ### Additonal informations :
 * [Terraform]() will retrieve the appropriate most recent AMI in a given region in using a common tag issued from the Packer build.
-* some informations may be needed in variables.tf or terraform.tfvars (example your ssh key path, specific region, ...). 
+* some informations may be needed in variables.tf or terraform.tfvars (example: your AWS credentials/profile , ssh key path, specific region, ...). 
+
+
