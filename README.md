@@ -35,7 +35,7 @@ This allows a faster boot time and avoid repetitive download to install dependen
 packer build packer.json 
 ```
 * index.php is downloaded from a S3 bucket and a Ec2 role with S3 access has been previously created. 
-
+* your own ssh key and AWS credentials(profile) need to be defined in .tfvars file.
 ### Additonal informations :
 * [Terraform]() will retrieve the appropriate most recent AMI in a given region in using a common tag issued from the Packer build.
 * some informations may be needed in variables.tf or terraform.tfvars (example: your AWS credentials/profile , ssh key path, specific region, ...). 
