@@ -22,7 +22,7 @@ terraform apply
 
 - The script will output the dns address of the Elastic Load Balancer , simply copy the url and add /index.php to get the desired webpage.  
 example : http://elb-1961652575.us-west-2.elb.amazonaws.com/index.php 
-- refresh the page to get a different result 
+- refresh the page to get a different [results](https://github.com/nicohouillon/aws_test_approach_1/tree/master/results) 
 
 3) Autoscaling :
 - using the command stress , we can stimulate the CPU and force the autoscaling policies to increase the number of instances.
