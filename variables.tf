@@ -1,3 +1,8 @@
+
+variable "name" {
+	description = "base name" 
+	default = "nh"
+}
 variable "region" {
   description = "AWS region"
 }

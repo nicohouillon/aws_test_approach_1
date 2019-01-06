@@ -15,7 +15,7 @@ resource "aws_launch_configuration" "as_launch_config" {
 resource "aws_autoscaling_group" "web_as_group" {
   launch_configuration = "${aws_launch_configuration.as_launch_config.id}"
   #availability_zones = ["${data.aws_availability_zones.allzones.names}"]
-  availability_zones        = "${var.availability_zones}"
+  #availability_zones        = "${var.availability_zones}"
   vpc_zone_identifier       = ["${aws_subnet.public_subnet.*.id}"]
   min_size = 2
   max_size = 5
@@ -40,7 +40,7 @@ resource "aws_autoscaling_group" "web_as_group" {
 ## SG for web instances
 resource "aws_security_group" "web_sg" {
 name = "security_group_for_web_server"
-vpc_id = "${aws_vpc.nh_vpc.id}"
+vpc_id = "${aws_vpc.vpc.id}"
 ingress {
   from_port = 80
     to_port = 80

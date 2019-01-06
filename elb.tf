@@ -1,7 +1,7 @@
 ## Security Group for ELB
 resource "aws_security_group" "elb_sg" {
   name = "security_group_for_elb"
-  vpc_id = "${aws_vpc.nh_vpc.id}"
+  vpc_id = "${aws_vpc.vpc.id}"
   egress {
     from_port = 0
     to_port = 0

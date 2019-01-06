@@ -1,5 +1,7 @@
 # aws_test_approach_1
-Launch a simple web site in a load balanced and highly available manner utilizing automation and AWS best practices
+Launch a simple web site in a load balanced and highly available manner utilizing automation and AWS best practices.
+
+Overview of the architeture [Diagram](https://drive.google.com/file/d/1ZFKLnRfcZXwKcJx9_jU5nsVl4GFWqInl/view?usp=sharing)
 
 
 ### Prerequisites
